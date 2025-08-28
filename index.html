@@ -1,139 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eagles Findings Limited</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'gold': '#d4af37',
+            'blue-black': '#0f172a'
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #0a0a0f; /* blue-black background */
-      color: #fff;
+    .bg-uk-property {
+      background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background: #0a0a0f;
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    header img {
-      height: 60px;
-      margin-right: 15px;
+    .hover-lift:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     }
-    header h1 {
-      font-size: 24px;
-      color: gold;
-      margin: 0;
+    .bg-gradient-blue-gold {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #d4af37 100%);
     }
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .hero h2 {
-      font-size: 36px;
-      color: gold;
-    }
-    .hero p {
-      font-size: 18px;
-      margin: 20px 0;
-    }
-    .btn {
-      background: gold;
-      color: #0a0a0f;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 10px;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .popup form {
-      background: #fff;
-      color: #000;
-      padding: 30px;
-      border-radius: 12px;
-      width: 300px;
-      text-align: center;
-    }
-    .popup input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
   </style>
 </head>
-<body>
 
-  <header>
-    <img src="Trustworthy Wordmark Logo for Eagles Findings_20250827_185850_0000.png" alt="Eagles Findings Logo">
-    <h1>Eagles Findings Limited</h1>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-blue-black text-gold p-4 flex items-center shadow-lg">
+    <div class="h-12 w-12 bg-gold rounded-full flex items-center justify-center mr-3">
+      <span class="text-blue-black font-bold text-xl">🦅</span>
+    </div>
+    <div class="flex flex-col">
+      <span class="text-lg font-bold">Eagles Findings Limited</span>
+      <span class="text-sm opacity-80">Property Sourcing & Investment</span>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Your Trusted Partner in UK Property Investments</h2>
-    <p>Helping you buy, sell, and invest in properties with confidence.</p>
-    <button class="btn" id="consultBtn">Book a Consultation</button>
-    <button class="btn" id="downloadBtn">Download PDF</button>
+  <!-- Hero Section -->
+  <section class="bg-uk-property relative">
+    <div class="bg-gradient-blue-gold bg-opacity-95 text-center py-20 px-6">
+      <h1 class="text-5xl font-bold mb-6 text-gold text-shadow">Welcome to Eagles Findings Limited</h1>
+      <p class="mb-8 text-xl text-white text-shadow max-w-3xl mx-auto">
+        Discover exceptional property investment opportunities across Southeast UK with our expert sourcing services, 
+        advanced technology, and comprehensive professional network.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:+447706479651" class="bg-gold text-blue-black px-8 py-4 rounded-lg font-semibold shadow-lg hover-lift">
+          📞 Book Consultation
+        </a>
+        <a href="mailto:contact@eaglefindings.uk" class="bg-transparent border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold shadow-lg hover-lift">
+          📧 Get In Touch
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- Consultation Popup -->
-  <div id="consultPopup" class="popup">
-    <form id="consultForm">
-      <h2>Book a Consultation</h2>
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone (with country code)" required>
-      <textarea name="message" placeholder="Message/Comment"></textarea>
-      <button type="submit" class="btn">Submit</button>
-    </form>
-  </div>
+  <!-- Why Choose Us -->
+  <section class="py-16 px-6 bg-gray-50">
+    <h2 class="text-4xl font-bold text-center mb-4 text-blue-black">Why Choose Eagles Findings?</h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Four years of proven expertise in Southeast UK property markets with cutting-edge technology and expert networks
+    </p>
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-8 shadow-lg rounded-2xl text-center hover-lift">
+        <div class="text-4xl mb-4 text-gold">4+</div>
+        <div class="font-semibold text-blue-black">Years Experience</div>
+      </div>
+      <div class="bg-white p-8 shadow-lg rounded-2xl text-center hover-lift">
+        <div class="text-4xl mb-4 text-gold">100%</div>
+        <div class="font-semibold text-blue-black">Southeast UK Focus</div>
+      </div>
+      <div class="bg-white p-8 shadow-lg rounded-2xl text-center hover-lift">
+        <div class="text-4xl mb-4 text-gold">24/7</div>
+        <div class="font-semibold text-blue-black">Expert Support</div>
+      </div>
+      <div class="bg-white p-8 shadow-lg rounded-2xl text-center hover-lift">
+        <div class="text-4xl mb-4 text-gold">∞</div>
+        <div class="font-semibold text-blue-black">Investment Opportunities</div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Download PDF Popup -->
-  <div id="downloadPopup" class="popup">
-    <form id="downloadForm">
-      <h2>Get Your Free PDF</h2>
-      <p>Things you should know before investing in property in the UK.</p>
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone (with country code)" required>
-      <button type="submit" class="btn">Submit & Download</button>
-    </form>
-  </div>
+  <!-- Contact Section -->
+  <section class="py-16 px-6 text-center bg-white">
+    <h2 class="text-4xl font-bold mb-4 text-blue-black">Ready to Start Your Investment Journey?</h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Contact Eagles Findings Limited today to discover your next property investment opportunity
+    </p>
+    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="bg-gradient-to-br from-blue-black to-gray-800 text-white p-8 rounded-2xl hover-lift">
+        <div class="text-4xl mb-4 text-gold">📍</div>
+        <h3 class="font-bold mb-2">Location</h3>
+        <p>Barnet - Hertfordshire</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-black to-gray-800 text-white p-8 rounded-2xl hover-lift">
+        <div class="text-4xl mb-4 text-gold">✉️</div>
+        <h3 class="font-bold mb-2">Email</h3>
+        <a href="mailto:contact@eaglefindings.uk" class="text-gold hover:underline">contact@eaglefindings.uk</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-black to-gray-800 text-white p-8 rounded-2xl hover-lift">
+        <div class="text-4xl mb-4 text-gold">🌐</div>
+        <h3 class="font-bold mb-2">Website</h3>
+        <a href="https://eaglefindings.uk" target="_blank" class="text-gold hover:underline">eaglefindings.uk</a>
+      </div>
+    </div>
 
-  <script>
-    // Book Consultation
-    document.getElementById("consultBtn").onclick = () => {
-      document.getElementById("consultPopup").style.display = "flex";
-    };
-    document.getElementById("consultForm").onsubmit = (e) => {
-      e.preventDefault();
-      alert("Thank you! We’ll contact you shortly.");
-      document.getElementById("consultPopup").style.display = "none";
-    };
+    <div class="mt-12 text-gray-700">
+      <h4 class="font-bold text-lg">Company Registered Address:</h4>
+      <p>128, City Road, London EC1V 2NX</p>
+    </div>
+  </section>
 
-    // Download PDF
-    document.getElementById("downloadBtn").onclick = () => {
-      document.getElementById("downloadPopup").style.display = "flex";
-    };
-    document.getElementById("downloadForm").onsubmit = (e) => {
-      e.preventDefault();
-      // Redirect to direct download link
-      window.location.href = "https://drive.google.com/uc?export=download&id=1Tal1iQTPeibUUyLoiVjEOxVQhm4Qiu9v";
-      document.getElementById("downloadPopup").style.display = "none";
-    };
-  </script>
+  <!-- Footer -->
+  <footer class="bg-blue-black text-gold text-center py-8">
+    <div class="flex flex-col items-center max-w-4xl mx-auto px-6">
+      <div class="h-16 w-16 bg-gold rounded-full flex items-center justify-center mb-4">
+        <span class="text-blue-black font-bold text-2xl">🦅</span>
+      </div>
+      <span class="font-bold text-xl mb-2">Eagles Findings Limited</span>
+      <p class="text-sm opacity-80 mb-4 max-w-2xl">
+        © 2024 Eagles Findings Limited. All rights reserved.<br>
+        Professional Property Sourcing & Investment Services - Southeast UK<br>
+        Connecting investors with exceptional opportunities through expertise and technology.
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
