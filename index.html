@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eagles Findings Limited</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #0a0a0f; /* blue-black background */
+      color: #fff;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: #0a0a0f;
+    }
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 24px;
+      color: gold;
+      margin: 0;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h2 {
+      font-size: 36px;
+      color: gold;
+    }
+    .hero p {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    .btn {
+      background: gold;
+      color: #0a0a0f;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .popup form {
+      background: #fff;
+      color: #000;
+      padding: 30px;
+      border-radius: 12px;
+      width: 300px;
+      text-align: center;
+    }
+    .popup input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Trustworthy Wordmark Logo for Eagles Findings_20250827_185850_0000.png" alt="Eagles Findings Logo">
+    <h1>Eagles Findings Limited</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Your Trusted Partner in UK Property Investments</h2>
+    <p>Helping you buy, sell, and invest in properties with confidence.</p>
+    <button class="btn" id="consultBtn">Book a Consultation</button>
+    <button class="btn" id="downloadBtn">Download PDF</button>
+  </section>
+
+  <!-- Consultation Popup -->
+  <div id="consultPopup" class="popup">
+    <form id="consultForm">
+      <h2>Book a Consultation</h2>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone (with country code)" required>
+      <textarea name="message" placeholder="Message/Comment"></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+
+  <!-- Download PDF Popup -->
+  <div id="downloadPopup" class="popup">
+    <form id="downloadForm">
+      <h2>Get Your Free PDF</h2>
+      <p>Things you should know before investing in property in the UK.</p>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone (with country code)" required>
+      <button type="submit" class="btn">Submit & Download</button>
+    </form>
+  </div>
+
+  <script>
+    // Book Consultation
+    document.getElementById("consultBtn").onclick = () => {
+      document.getElementById("consultPopup").style.display = "flex";
+    };
+    document.getElementById("consultForm").onsubmit = (e) => {
+      e.preventDefault();
+      alert("Thank you! We’ll contact you shortly.");
+      document.getElementById("consultPopup").style.display = "none";
+    };
+
+    // Download PDF
+    document.getElementById("downloadBtn").onclick = () => {
+      document.getElementById("downloadPopup").style.display = "flex";
+    };
+    document.getElementById("downloadForm").onsubmit = (e) => {
+      e.preventDefault();
+      // Redirect to direct download link
+      window.location.href = "https://drive.google.com/uc?export=download&id=1Tal1iQTPeibUUyLoiVjEOxVQhm4Qiu9v";
+      document.getElementById("downloadPopup").style.display = "none";
+    };
+  </script>
+
+</body>
+</html>
