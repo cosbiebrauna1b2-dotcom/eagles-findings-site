@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eagles Findings Limited</title>
+  <title>Eagle Findings Limited</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -39,15 +39,16 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
   </style>
+</head>
 
-body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900">
   <!-- Header -->
   <header class="bg-blue-black text-gold p-4 flex items-center shadow-lg">
     <div class="h-12 w-12 bg-gold rounded-full flex items-center justify-center mr-3">
       <span class="text-blue-black font-bold text-xl">🦅</span>
     </div>
     <div class="flex flex-col">
-      <span class="text-lg font-bold">Eagles Findings Limited</span>
+      <span class="text-lg font-bold">Eagle Findings Limited</span>
       <span class="text-sm opacity-80">Property Sourcing & Investment</span>
     </div>
   </header>
@@ -55,17 +56,23 @@ body class="bg-gray-50 text-gray-900">
   <!-- Hero Section -->
   <section class="bg-uk-property relative">
     <div class="bg-gradient-blue-gold bg-opacity-95 text-center py-20 px-6">
-      <h1 class="text-5xl font-bold mb-6 text-gold text-shadow">Welcome to Eagles Findings Limited</h1>
+      <h1 class="text-5xl font-bold mb-6 text-gold text-shadow">Welcome to Eagle Findings Limited</h1>
       <p class="mb-8 text-xl text-white text-shadow max-w-3xl mx-auto">
         Discover exceptional property investment opportunities across Southeast UK with our expert sourcing services, 
         advanced technology, and comprehensive professional network.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
-        <button onclick="openModal('consultationModal')" class="bg-gold text-blue-black px-8 py-4 rounded-lg font-semibold shadow-lg hover-lift">
+        <!-- Book Consultation triggers modal -->
+        <button onclick="openModal('consultation')" class="bg-gold text-blue-black px-8 py-4 rounded-lg font-semibold shadow-lg hover-lift">
           📞 Book Consultation
         </button>
-        <button onclick="openModal('consultationModal')" class="bg-transparent border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold shadow-lg hover-lift">
+        <!-- Get In Touch stays as-is visually; now just scrolls to contact (no modal) -->
+        <a href="#contact" class="bg-transparent border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold shadow-lg hover-lift inline-block">
           📧 Get In Touch
+        </a>
+        <!-- Download PDF triggers modal; after submit it downloads -->
+        <button onclick="openModal('download')" class="bg-blue-black border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold shadow-lg hover-lift">
+          📄 Download PDF
         </button>
       </div>
     </div>
@@ -73,7 +80,7 @@ body class="bg-gray-50 text-gray-900">
 
   <!-- Why Choose Us -->
   <section class="py-16 px-6 bg-gray-50">
-    <h2 class="text-4xl font-bold text-center mb-4 text-blue-black">Why Choose Eagles Findings?</h2>
+    <h2 class="text-4xl font-bold text-center mb-4 text-blue-black">Why Choose Eagle Findings?</h2>
     <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
       Four years of proven expertise in Southeast UK property markets with cutting-edge technology and expert networks
     </p>
@@ -161,7 +168,7 @@ body class="bg-gray-50 text-gray-900">
   <section class="py-16 px-6 bg-gradient-blue-gold text-white">
     <h2 class="text-4xl font-bold text-center mb-4 text-shadow">Our Competitive Advantages</h2>
     <p class="text-center mb-12 max-w-2xl mx-auto opacity-90">
-      What sets Eagles Findings Limited apart in the Southeast UK property market
+      What sets Eagle Findings Limited apart in the Southeast UK property market
     </p>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl hover-lift border border-white border-opacity-20">
@@ -210,10 +217,10 @@ body class="bg-gray-50 text-gray-900">
   </section>
 
   <!-- Contact -->
-  <section class="py-16 px-6 text-center bg-white">
+  <section id="contact" class="py-16 px-6 text-center bg-white">
     <h2 class="text-4xl font-bold mb-4 text-blue-black">Ready to Start Your Investment Journey?</h2>
     <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
-      Contact Eagles Findings Limited today to discover your next property investment opportunity
+      Contact Eagle Findings Limited today to discover your next property investment opportunity
     </p>
     <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
       <div class="bg-gradient-to-br from-blue-black to-gray-800 text-white p-8 rounded-2xl hover-lift">
@@ -224,7 +231,7 @@ body class="bg-gray-50 text-gray-900">
       <div class="bg-gradient-to-br from-blue-black to-gray-800 text-white p-8 rounded-2xl hover-lift">
         <div class="text-4xl mb-4 text-gold">✉️</div>
         <h3 class="font-bold mb-2">Email</h3>
-        <a href="mailto:findingsbyeagle@gmail.com" class="text-gold hover:underline break-all">findingsbyeagle@gmail.com</a>
+        <a href="mailto:contact@eaglefindings.uk" class="text-gold hover:underline break-all">contact@eaglefindings.uk</a>
       </div>
       <div class="bg-gradient-to-br from-blue-black to-gray-800 text-white p-8 rounded-2xl hover-lift">
         <div class="text-4xl mb-4 text-gold">🌐</div>
@@ -240,609 +247,58 @@ body class="bg-gray-50 text-gray-900">
       <div class="h-16 w-16 bg-gold rounded-full flex items-center justify-center mb-4">
         <span class="text-blue-black font-bold text-2xl">🦅</span>
       </div>
-      <span class="font-bold text-xl mb-2">Eagles Findings Limited</span>
+      <span class="font-bold text-xl mb-2">Eagle Findings Limited</span>
       <p class="text-sm opacity-80 mb-4 max-w-2xl">
-        © 2024 Eagles Findings Limited. All rights reserved.<br>
+        © 2024 Eagle Findings Limited. All rights reserved.<br>
         Professional Property Sourcing & Investment Services - Southeast UK<br>
         Connecting investors with exceptional opportunities through expertise and technology.
       </p>
     </div>
   </footer>
 
-.footer {
-
-background: #1a252f;
-
-color: white;
-
-padding: 40px;
-
-text-align: center;
-
-}
-
-.footer-content {
-
-max-width: 600px;
-
-margin: 0 auto;
-
-}
-
-.footer-title {
-
-font-size: 1.5em;
-
-margin-bottom: 15px;
-
-font-weight: 600;
-
-}
-
-.footer-text {
-
-opacity: 0.8;
-
-line-height: 1.7;
-
-}
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-
-.cover-page {
-
-padding: 60px 20px;
-
-min-height: 80vh;
-
-}
-
-.cover-title {
-
-font-size: 2.8em;
-
-}
-
-.cover-subtitle {
-
-font-size: 1.5em;
-
-}
-
-.hero-section {
-
-padding: 60px 20px;
-
-}
-
-.hero-title {
-
-font-size: 2.5em;
-
-}
-
-.company-logo {
-
-width: 80px;
-
-height: 80px;
-
-}
-
-.about-section,
-
-.services-section,
-
-.who-we-serve-section,
-
-.advantages-section,
-
-.contact-section {
-
-padding: 60px 20px;
-
-}
-
-.section-title {
-
-font-size: 2em;
-
-}
-
-.cta-buttons {
-
-flex-direction: column;
-
-align-items: center;
-
-}
-
-.cta-button {
-
-width: 200px;
-
-text-align: center;
-
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="brochure">
-
-<!-- Cover Page -->
-
-<div class="cover-page">
-
-<div class="cover-content">
-
-<div class="logo-display">
-
-<img class="company-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdwAAALcCAYAAADb8XQNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAEAASURBVHhe7N13fBTV+vfx72Y3yS5JgCQQkkDoJSAJLQRCBxsEsICAgr0iYsV69arovfe7V689YhdsKFhAUJAqKkW6dBJCiKQQUkhCSC+b3fn/zrwzM7vZ7CYkJCQ+z7xe7G5mzpxz5swz55x553eORAiB4zi0r1+/fr06dOgQiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi" alt="Eagle Findings Logo">
-
-</div>
-
-<h1 class="cover-title">EAGLE FINDINGS LIMITED</h1>
-
-<h2 class="cover-subtitle">Property Sourcing & Investment</h2>
-
-<p class="cover-description">
-
-Professional Property Investment Solutions<br>
-
-Southeast UK Specialists
-
-</p>
-
-</div>
-
-</div>
-
-<!-- Hero Section -->
-
-<div class="hero-section">
-
-<div class="hero-content">
-
-<h2 class="hero-subtitle">Discover exceptional property investment opportunities across Southeast UK</h2>
-
-<p class="hero-description">
-
-Expert sourcing services, advanced technology, and comprehensive professional network
-
-to maximize your investment potential.
-
-</p>
-
-<div class="cta-buttons">
-
-<a href="tel:+447706479651" class="cta-button">📞 Call Now</a>
-
-<a href="mailto:findingsbyeagle@gmail.com" class="cta-button">✉️ Get In Touch</a>
-
-<a href="https://eaglefindings.co.uk" target="_blank" class="cta-button">🌐 Visit Website</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- About Section -->
-
-<div class="about-section">
-
-<h2 class="section-title">Why Choose Eagle Findings?</h2>
-
-<p class="section-subtitle">
-
-Four years of proven expertise in Southeast UK property markets with cutting-edge technology and expert networks
-
-</p>
-
-<div class="stats-grid">
-
-<div class="stat-card">
-
-<div class="stat-number">4+</div>
-
-<div class="stat-label">Years Experience</div>
-
-</div>
-
-<div class="stat-card">
-
-<div class="stat-number">100%</div>
-
-<div class="stat-label">Southeast UK Focus</div>
-
-</div>
-
-<div class="stat-card">
-
-<div class="stat-number">24/7</div>
-
-<div class="stat-label">Expert Support</div>
-
-</div>
-
-<div class="stat-card">
-
-<div class="stat-number">∞</div>
-
-<div class="stat-label">Investment Opportunities</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Services Section -->
-
-<div class="services-section">
-
-<h2 class="section-title">Our Services</h2>
-
-<p class="section-subtitle">
-
-Comprehensive property sourcing solutions tailored to your investment goals
-
-</p>
-
-<div class="services-grid">
-
-<div class="service-item">
-
-<div class="service-icon">🔍</div>
-
-<h3 class="service-title">Property Sourcing</h3>
-
-<p class="service-description">
-
-Expert property identification and acquisition services tailored to your specific investment goals and budget requirements.
-
-</p>
-
-</div>
-
-<div class="service-item">
-
-<div class="service-icon">💼</div>
-
-<h3 class="service-title">Investment Consultation</h3>
-
-<p class="service-description">
-
-Professional guidance for first-time investors, experienced landlords, and property developers seeking profitable opportunities.
-
-</p>
-
-</div>
-
-<div class="service-item">
-
-<div class="service-icon">📊</div>
-
-<h3 class="service-title">Market Analysis</h3>
-
-<p class="service-description">
-
-In-depth Southeast UK market research and analysis to ensure you make informed investment decisions.
-
-</p>
-
-</div>
-
-<div class="service-item">
-
-<div class="service-icon">🤝</div>
-
-<h3 class="service-title">End-to-End Support</h3>
-
-<p class="service-description">
-
-Complete service from property identification through to acquisition, with ongoing support throughout the process.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Who We Serve Section -->
-
-<div class="who-we-serve-section">
-
-<h2 class="section-title">Who We Serve</h2>
-
-<p class="section-subtitle">
-
-Our expert property sourcing services cater to a diverse range of clients seeking investment opportunities
-
-</p>
-
-<div class="clients-grid">
-
-<div class="client-item">
-
-<div class="client-icon">🏠</div>
-
-<h3 class="client-title">First-Time Investors</h3>
-
-<p class="client-description">
-
-New to property investment? We provide comprehensive guidance and hand-picked opportunities perfect for building your first property portfolio.
-
-</p>
-
-</div>
-
-<div class="client-item">
-
-<div class="client-icon">💼</div>
-
-<h3 class="client-title">Experienced Investors</h3>
-
-<p class="client-description">
-
-Seasoned investors looking to expand their portfolios with high-yield properties and strategic investment opportunities across Southeast UK.
-
-</p>
-
-</div>
-
-<div class="client-item">
-
-<div class="client-icon">🏘️</div>
-
-<h3 class="client-title">Portfolio Landlords</h3>
-
-<p class="client-description">
-
-Landlords seeking to diversify and grow their rental property portfolios with reliable, high-performing investment properties.
-
-</p>
-
-</div>
-
-<div class="client-item">
-
-<div class="client-icon">🏗️</div>
-
-<h3 class="client-title">Property Developers</h3>
-
-<p class="client-description">
-
-Developers looking for renovation projects, development opportunities, and properties with significant value-add potential.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Advantages Section -->
-
-<div class="advantages-section">
-
-<h2 class="section-title" style="color: white;">Our Competitive Advantages</h2>
-
-<p class="section-subtitle" style="color: rgba(255,255,255,0.9);">
-
-What sets Eagle Findings Limited apart in the Southeast UK property market
-
-</p>
-
-<div class="advantages-grid">
-
-<div class="advantage-card">
-
-<div class="advantage-header">
-
-<div class="advantage-icon">🌐</div>
-
-<div class="advantage-title">Expert Network</div>
-
-</div>
-
-<p class="advantage-text">
-
-Extensive network of property contacts, estate agents, and industry professionals across the Southeast.
-
-</p>
-
-</div>
-
-<div class="advantage-card">
-
-<div class="advantage-header">
-
-<div class="advantage-icon">💻</div>
-
-<div class="advantage-title">High-End Technology</div>
-
-</div>
-
-<p class="advantage-text">
-
-Advanced sourcing technology and methods to identify the best properties before they hit the market.
-
-</p>
-
-</div>
-
-<div class="advantage-card">
-
-<div class="advantage-header">
-
-<div class="advantage-icon">🏠</div>
-
-<div class="advantage-title">Local Market Expertise</div>
-
-</div>
-
-<p class="advantage-text">
-
-Deep knowledge of Southeast UK property markets and emerging investment opportunities.
-
-</p>
-
-</div>
-
-<div class="advantage-card">
-
-<div class="advantage-header">
-
-<div class="advantage-icon">👥</div>
-
-<div class="advantage-title">Professional Network</div>
-
-</div>
-
-<p class="advantage-text">
-
-Access to accountants, surveyors, mortgage brokers, architects, and solicitors for complete support.
-
-</p>
-
-</div>
-
-<div class="advantage-card">
-
-<div class="advantage-header">
-
-<div class="advantage-icon">⭐</div>
-
-<div class="advantage-title">Expert Sources</div>
-
-</div>
-
-<p class="advantage-text">
-
-Four years of proven expertise with expert sources and comprehensive market knowledge.
-
-</p>
-
-</div>
-
-<div class="advantage-card">
-
-<div class="advantage-header">
-
-<div class="advantage-icon">🎯</div>
-
-<div class="advantage-title">Targeted Solutions</div>
-
-</div>
-
-<p class="advantage-text">
-
-Personalized service for first-time investors, experienced investors, landlords, and developers.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Contact Section -->
-
-<div class="contact-section">
-
-<h2 class="section-title" style="color: white;">Ready to Start Your Investment Journey?</h2>
-
-<p class="section-subtitle" style="color: rgba(255,255,255,0.9);">
-
-Contact Eagle Findings Limited today to discover your next property investment opportunity
-
-</p>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<div class="contact-icon">📞</div>
-
-<h3 class="contact-title">Phone</h3>
-
-<p class="contact-info">
-
-<a href="tel:+447706479651" class="contact-link">+44 770 6479 651</a>
-
-</p>
-
-</div>
-
-<div class="contact-card">
-
-<div class="contact-icon">✉️</div>
-
-<h3 class="contact-title">Email</h3>
-
-<p class="contact-info">
-
-<a href="mailto:findingsbyeagle@gmail.com" class="contact-link">findingsbyeagle@gmail.com</a>
-
-</p>
-
-</div>
-
-<div class="contact-card">
-
-<div class="contact-icon">🌐</div>
-
-<h3 class="contact-title">Website</h3>
-
-<p class="contact-info">
-
-<a href="https://eaglefindings.co.uk" target="_blank" class="contact-link">eaglefindings.co.uk</a>
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Footer -->
-
-<div class="footer">
-
-<div class="footer-content">
-
-<h3 class="footer-title">Eagle Findings Limited</h3>
-
-<p class="footer-text">
-
-© 2024 Eagle Findings Limited. All rights reserved.<br>
-
-Professional Property Sourcing & Investment Services - Southeast UK<br>
-
-Connecting investors with exceptional opportunities through expertise and technology.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+  <!-- Modal (opens only from Book Consultation or Download PDF) -->
+  <div id="leadModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full relative">
+      <button onclick="closeModal()" class="absolute top-2 right-3 text-gray-600 text-2xl leading-none">&times;</button>
+      <h2 class="text-2xl font-bold mb-4 text-blue-black">Enter Your Details</h2>
+      <form id="leadForm" class="space-y-4">
+        <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 border rounded">
+        <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 border rounded">
+        <input type="tel" name="phone" placeholder="Phone Number (+44...)" required class="w-full p-3 border rounded">
+        <input type="hidden" id="leadIntent" name="intent" value="">
+        <button type="submit" class="bg-gold text-blue-black px-6 py-3 rounded font-semibold w-full">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modalEl = document.getElementById('leadModal');
+    const intentEl = document.getElementById('leadIntent');
+    const directPdf = "https://drive.google.com/uc?export=download&id=1Tal1iQTPeibUUyLoiVjEOxVQhm4Qiu9v";
+
+    function openModal(intent) {
+      intentEl.value = intent || '';
+      modalEl.classList.remove('hidden');
+    }
+    function closeModal() {
+      modalEl.classList.add('hidden');
+    }
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const intent = intentEl.value;
+      closeModal();
+      // If triggered by "Download PDF", start download
+      if (intent === 'download') {
+        window.location.href = directPdf;
+      } else {
+        // Book consultation path: keep page unchanged (you can add a toast/thank-you later)
+      }
+    });
+  </script>
 </body>
-
-</html> 
+</html>
